@@ -4,25 +4,25 @@ import pyodbc
 import dash_uploader as du
 import dash
 from dash import dcc, html, Input, Output, State, dash_table, Patch, ctx, callback
-from tempfile import NamedTemporaryFile
-import base64
-from base64 import b64encode
+# from tempfile import NamedTemporaryFile
+# import base64
+# from base64 import b64encode
 import os, shutil
-import io
+# import io
 from dash.exceptions import PreventUpdate
 from flask import request
 import pandas as pd
-import random
+# import random
 import plotly_express as px
 import dash_bootstrap_components as dbc
 from dash_bootstrap_templates import load_figure_template
 import numpy as np
-import plotly.figure_factory as ff
-import subprocess
-import json
-from operator import methodcaller
+# import plotly.figure_factory as ff
+# import subprocess
+# import json
+# from operator import methodcaller
 import scipy.stats as stats
-import re
+# import re
 import gunicorn
 import scipy
 
