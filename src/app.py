@@ -31,8 +31,8 @@ app = dash.Dash(__name__, external_stylesheets=[dbc.themes.JOURNAL],
 server = app.server
 app.title = 'Monte Carlo Simulering'
 # app._favicon = ('assets/favicon.ico')
-UPLOAD_FOLDER_ROOT = os.environ.get('UPLOAD_FOLDER_ROOT')
-du.configure_upload(app, 'UPLOAD_FOLDER_ROOT')
+UPLOAD_FOLDER_ROOT = r"UPLOAD_FOLDER_ROOT" #os.environ.get('UPLOAD_FOLDER_ROOT')
+du.configure_upload(app, UPLOAD_FOLDER_ROOT)
 filnavn = []
 load_figure_template('journal')
 testi = 'banan'
@@ -229,7 +229,7 @@ def callback_on_completion(status: du.UploadStatus):
     Ansvarlig = ProsjektPlan.iat[0, 45]
     Intervall = []
     conn.close()
-    shutil.rmtree('UPLOAD_FOLDER_ROOT')
+    # shutil.rmtree(upload_id)
 
     def format_with_space(number):
         return '{:,.0f}'.format(number).replace(',', ' ')
